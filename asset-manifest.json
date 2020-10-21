@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/joeweeks-com525/static/js/main.0415b86c.chunk.js",
+    "main.js.map": "/joeweeks-com525/static/js/main.0415b86c.chunk.js.map",
+    "runtime-main.js": "/joeweeks-com525/static/js/runtime-main.eb851877.js",
+    "runtime-main.js.map": "/joeweeks-com525/static/js/runtime-main.eb851877.js.map",
+    "static/js/2.9361870d.chunk.js": "/joeweeks-com525/static/js/2.9361870d.chunk.js",
+    "static/js/2.9361870d.chunk.js.map": "/joeweeks-com525/static/js/2.9361870d.chunk.js.map",
+    "index.html": "/joeweeks-com525/index.html",
+    "precache-manifest.70ec0d2b7c3c6a4199fc8cbe4b6381b7.js": "/joeweeks-com525/precache-manifest.70ec0d2b7c3c6a4199fc8cbe4b6381b7.js",
+    "service-worker.js": "/joeweeks-com525/service-worker.js",
+    "static/js/2.9361870d.chunk.js.LICENSE.txt": "/joeweeks-com525/static/js/2.9361870d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb851877.js",
+    "static/js/2.9361870d.chunk.js",
+    "static/js/main.0415b86c.chunk.js"
+  ]
+}
