@@ -7,11 +7,11 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const AlertFloatIn = keyframes`
     from { transform: translateY(280px); opacity: 0; }
-    to { transform: translateY(40px); opacity: 1; }
+    to { transform: translateY(0px); opacity: 1; }
 `;
 
 const AlertFloatOut = keyframes`
-    from { transform: translateY(40px); opacity: 1; }
+    from { transform: translateY(0px); opacity: 1; }
     to { transform: translateY(280px); opacity: 0; }
 `;
 
@@ -27,8 +27,8 @@ const Main = styled.div`
 `
 
 const ToasterContainer = styled.div`
-    width: 10vw;
-    margin-left: 45vw;
+    width: 200px;
+    margin: 0 auto;
     height: 10vh;
     position: relative;
     bottom: -90%;
@@ -67,9 +67,8 @@ const HeaderAlert = styled.h1`
 
 const AlertCreationButton = styled.button`
     font-size: 28px;
-    position: absolute;
-    width: 5vw;
-    left: 47.5vw;
+    margin: 0 auto;
+    width: 100px;
 `;
 
 function Week2() {
