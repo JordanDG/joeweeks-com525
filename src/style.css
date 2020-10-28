@@ -1,9 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
 }
 
 nav {
@@ -20,20 +16,28 @@ nav h1 {
 }
 
 nav ul {
-    width: 15vw;
-    margin-left: 42.5vw;
+    width: 500px;
+    margin: 0 auto;
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-nav li {
+nav ul li {
     list-style-type: none;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    margin-top: 5px;
 }
 
-nav li a {
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+nav ul li {
     text-decoration: none;
     color: #000;
     font-size: 24px;
@@ -42,6 +46,10 @@ nav li a {
     border-bottom: 2px solid transparent;
 }
 
-nav li a:hover {
+nav ul li:hover {
     border-bottom: 2px solid #000;
+}
+
+.submitted {
+    display: none;
 }
