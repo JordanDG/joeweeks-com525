@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4dcf826a79a4bbdb3f262ec5acc65d18",
+    "revision": "26ea1b2b19da1c7c51649a12359d1dc0",
     "url": "/joeweeks-com525/index.html"
   },
   {
-    "revision": "54df641d33fc7c0e31c1",
-    "url": "/joeweeks-com525/static/css/main.069ecf4e.chunk.css"
+    "revision": "c50d845ad167041aa7ca",
+    "url": "/joeweeks-com525/static/css/main.209b162a.chunk.css"
   },
   {
-    "revision": "c890e4d9c92f1714f8a2",
-    "url": "/joeweeks-com525/static/js/2.ca946fed.chunk.js"
+    "revision": "4cbe8b28a6d3668c7b5c",
+    "url": "/joeweeks-com525/static/js/2.2f1dce8e.chunk.js"
   },
   {
     "revision": "e03bc987354c2248abac9f65077b10ee",
-    "url": "/joeweeks-com525/static/js/2.ca946fed.chunk.js.LICENSE.txt"
+    "url": "/joeweeks-com525/static/js/2.2f1dce8e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "54df641d33fc7c0e31c1",
-    "url": "/joeweeks-com525/static/js/main.e1bf22b4.chunk.js"
+    "revision": "c50d845ad167041aa7ca",
+    "url": "/joeweeks-com525/static/js/main.a029afe4.chunk.js"
   },
   {
     "revision": "d4f0edb15ba4a72b3af3",
