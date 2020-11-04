@@ -2,17 +2,34 @@ import React, { useState }  from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Swipeable} from 'react-swipeable';
+import { keyframes } from 'styled-components'
 
 // Icons //
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+// eslint-disable-next-line
+import styling from '../../style.css';
+
+const becomevisible = keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+`;
+
+const becomeinvisible = keyframes`
+    from { opacity: 1; }
+    to { opacity: 0; }
+`;
 
 const StyledContainerMain = styled.div`
     width: 80%;
     margin-left: 10%;
     height: 100%;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
 `;
 
 const BulletedSliderMain = styled.div`
@@ -70,7 +87,7 @@ const StyledWrapper = styled.div`
     flex-direction: row;
     height: 76.5vh;
     width: 100vw;
-    background-color: yellow;
+    background-color: #fafafa;
 `;
 
 const StyledSideNav = styled.div`
@@ -79,7 +96,7 @@ const StyledSideNav = styled.div`
     position: relative;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #333;
     transition: all 1s ease-in-out;
 `;
 
@@ -93,7 +110,7 @@ const StyledCloseIcon = styled.div`
 
 const StyledNav = styled.ul`
     display: flex;
-    color: #fafafa;
+    color: #00D7A3;
     flex-direction: column;
     margin-top: 5%;
 
@@ -102,6 +119,7 @@ const StyledNav = styled.ul`
         text-align: center;
         margin-top: 4rem;
         cursor: pointer;
+        font-size: 32px;
         transition: all 0.5s ease-in-out;
         &:hover {
             color: #ffff;
@@ -112,8 +130,8 @@ const StyledNav = styled.ul`
 const NavOpen = styled.button`
     color: #000;
     background-color: ${(props) => props.color};
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    font-size: 48px;
     font-weight: 300;
     text-align: center;
     border: 0.5px solid #000;
@@ -121,6 +139,7 @@ const NavOpen = styled.button`
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     cursor: pointer;
     margin: 2%;
+    margin-left: -0.25vw;
     transition: all 0.5s ease-in-out;
 
     &:hover {
@@ -129,16 +148,40 @@ const NavOpen = styled.button`
     }
 `;
 
+const StyledOverlayDiv = styled.div`
+    width: 69.9vw;
+    margin-left: 10vw;
+    height: 76.8vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: ${(props) => props.display ? 'block' : 'none'};
+    opacity: 0;
+    animation: ${becomevisible} 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-in-out;
+`;
+
 function Week5() {
 
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClose = () => {
-        setNavOpen(false);
+        setNavOpen(false); 
     }
 
     const handleOpen = () => {
         setNavOpen(true);
+    }
+
+    const handleSwipe = (event) => {
+        if(event.dir === "Right") {
+            setNavOpen(true);
+        }
+
+         if (event.dir === "Left") {
+            setNavOpen(false);
+        }
     }
 
     const [Page, setPage] = useState(1);
@@ -174,31 +217,37 @@ function Week5() {
         }
     };
     
-    // 
-    
     return (
        <StyledContainerMain>
            {Page===1 && (
             <div>
+                <Swipeable onSwiped={handleSwipe}>
                 <StyledWrapper>
+                { navOpen && ( 
+                    <StyledOverlayDiv display={NavOpen} onClick={handleClose}/>
+                )}
                     <StyledSideNav open={navOpen}>
                         <StyledCloseIcon onClick={handleClose}>
-                            <FontAwesomeIcon icon={faTimes} color="#fff" />
+                            <FontAwesomeIcon icon={faTimes} color="#00D7A3" />
                         </StyledCloseIcon>
                         { navOpen &&
                         (<StyledNav>
                             <li>Home</li>
                             <li>About</li>
+                            <li>Contact</li>
+                            <li>Gallery</li>
                             <li>Privacy</li>
                         </StyledNav>)
                         }
                     </StyledSideNav>
-                    <NavOpen open={navOpen} onClick={handleOpen} color="#00D7A3" hoverColor="#00FFC2">Open Nav</NavOpen>
+                    <NavOpen open={navOpen} onClick={handleOpen} color="#00D7A3" hoverColor="#00FFC2">
+                        <FontAwesomeIcon icon={faBars} color="#fff" />
+                    </NavOpen>
                 </StyledWrapper>
                 <BulletedSliderMain>
                     <BulletedContainer>
                         <SliderTitle>
-                            <SliderTitleText>Nav 1</SliderTitleText>
+                            <SliderTitleText>Navigation Sidebar</SliderTitleText>
                         </SliderTitle>
                         <Slider>
                             <FontAwesomeIcon icon={faArrowCircleLeft} color="#000" onClick={pageChangeDown}/>
@@ -211,15 +260,19 @@ function Week5() {
                         </Slider>
                     </BulletedContainer>
                 </BulletedSliderMain>
+                </Swipeable>
             </div>
             )}
 
             {Page===2 && (
             <div>
+                <StyledWrapper>
+                    <h1>Coming Soon</h1>
+                </StyledWrapper>
                 <BulletedSliderMain>
                     <BulletedContainer>
                         <SliderTitle>
-                            <SliderTitleText id="SliderText">Nav 2</SliderTitleText>
+                            <SliderTitleText id="SliderText">Tabular Navigation</SliderTitleText>
                         </SliderTitle>
                         <Slider>
                             <FontAwesomeIcon icon={faArrowCircleLeft} color="#000" onClick={pageChangeDown}/>
@@ -237,10 +290,13 @@ function Week5() {
 
             {Page===3 && (
             <div>
+                <StyledWrapper>
+                    <h1>Coming Soon</h1>
+                </StyledWrapper>
                 <BulletedSliderMain>
                     <BulletedContainer>
                         <SliderTitle>
-                            <SliderTitleText id="SliderText">Nav 3</SliderTitleText>
+                            <SliderTitleText id="SliderText">Navigation Primary</SliderTitleText>
                         </SliderTitle>
                         <Slider>
                             <FontAwesomeIcon icon={faArrowCircleLeft} color="#000" onClick={pageChangeDown}/>
