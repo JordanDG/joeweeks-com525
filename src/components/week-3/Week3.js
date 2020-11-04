@@ -131,7 +131,7 @@ const Breaker = styled.div`
     margin-left: 0vw;
 `
 
-const Button = (props) => {
+export const Button = (props) => {
     const { children, color, hoverColor } = props;
     return <StyledButton color={color} hoverColor={hoverColor}> {children} </StyledButton>
 };

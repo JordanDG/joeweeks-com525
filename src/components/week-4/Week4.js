@@ -265,6 +265,7 @@ function Week4() {;
 
     const [showPassword, setShowPassword] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [login, setLogin] = useState(false);
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema)
@@ -273,12 +274,19 @@ function Week4() {;
     const onSubmit = (data) => {
         setSubmitted(!submitted)
     }
+
+    const LoginContinue = () => {
+        setLogin(!login);
+        setSubmitted(!submitted);
+    }
+
     const handleClick = () => {
         setShowPassword(!showPassword);
     }
 
     const Logout = () => {
         setSubmitted(false);
+        setLogin(false);
     }
 
     return (
@@ -298,11 +306,33 @@ function Week4() {;
                     <SuccessText>
                         <SuccessTextHeader>Welcome, Jordan</SuccessTextHeader>
                     </SuccessText>
-                    <SuccessContinueButton>Continue</SuccessContinueButton>
+                    <SuccessContinueButton onClick={LoginContinue}>Continue</SuccessContinueButton>
                 </StyledLoginSuccessContainer>
             </div>
             )}
-            {!submitted && (<form onSubmit={handleSubmit(onSubmit)}>
+
+            {!submitted && login && (
+                <div>
+                <StyledTop>
+                    <BackArrow>
+                        <FontAwesomeIcon icon={faChevronLeft} color="#000" fixedWidth onClick={Logout} />
+                    </BackArrow>
+                    <TopTitle>
+                        <TopTitleText>Home</TopTitleText>
+                    </TopTitle>
+                </StyledTop>
+                <StyledLoginSuccessContainer>
+                    <UserIcon src={success} alt="User Icon" />
+                    <SuccessText>
+                        <SuccessTextHeader>Working.</SuccessTextHeader>
+                    </SuccessText>
+                    <SuccessContinueButton onClick={LoginContinue}>Continue</SuccessContinueButton>
+                </StyledLoginSuccessContainer>
+                </div>
+            )}
+
+            {!submitted && !login && (
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
                     <BackArrow>
                         <FontAwesomeIcon icon={faChevronLeft} color="#000" fixedWidth/>
