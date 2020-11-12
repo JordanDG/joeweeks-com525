@@ -2,11 +2,6 @@
     overflow: hidden;
 }
 
-@keyframes becomeinvisible {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
 nav {
     border-bottom: 2px solid #333;
 }
@@ -57,10 +52,4 @@ nav ul li:hover {
 
 .submitted {
     display: none;
-}
-
-.NavSwitchoff {
-    animation: becomeinvisible 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
 }

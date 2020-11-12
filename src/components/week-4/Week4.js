@@ -80,6 +80,21 @@ const TopTitleText = styled.p`
     color: #000;
 `;
 
+const TopTitleLogin = styled.div`
+    width: 400px;
+    height: 100px;
+`;
+
+const TopTitleTextLogin = styled.p`
+    font-size: 2rem;
+    line-height: 200%;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    display: block;
+    text-align: center;
+    color: #000;
+`;
+
 const StyledIconSplash = styled.div`
     width: 100%;
     height: 14vh;
@@ -122,8 +137,9 @@ const LoginInput = styled.input`
 
 const StyledPasswordCheckbox = styled.div`
     width: 80%;
-    height: 70px;
+    height: 50px;
     margin-left: 10%;
+    margin-top: -5%;
 `;
 
 const PasswordRetentionCheckbox = styled.input`
@@ -140,7 +156,7 @@ const PasswordRetentionCheckbox = styled.input`
 const PasswordRetention = styled.p`
     display: inline-block;
     margin-left: 5px;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
 `;
 
@@ -191,7 +207,7 @@ const SignupSplashContainer = styled.div`
 
 const SignUpPartOne = styled.p`
     color: #333;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     display: inline-block;
 `;
@@ -334,12 +350,9 @@ function Week4() {;
             {!submitted && !login && (
             <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
-                    <BackArrow>
-                        <FontAwesomeIcon icon={faChevronLeft} color="#000" fixedWidth/>
-                    </BackArrow>
-                    <TopTitle>
-                        <TopTitleText>Login</TopTitleText>
-                    </TopTitle>
+                    <TopTitleLogin>
+                        <TopTitleTextLogin>Login</TopTitleTextLogin>
+                    </TopTitleLogin>
                 </StyledTop>
                 <StyledIconSplash>
                     <UserIcon src={UserIconSrc} alt="User Icon" />

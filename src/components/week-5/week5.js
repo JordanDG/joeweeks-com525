@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Swipeable} from 'react-swipeable';
-import { keyframes } from 'styled-components'
+import { keyframes } from 'styled-components';
 
 // Icons //
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -11,17 +11,9 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-// eslint-disable-next-line
-import styling from '../../style.css';
-
 const becomevisible = keyframes`
     from { opacity: 0; }
     to { opacity: 1; }
-`;
-
-const becomeinvisible = keyframes`
-    from { opacity: 1; }
-    to { opacity: 0; }
 `;
 
 const StyledContainerMain = styled.div`
@@ -134,9 +126,10 @@ const NavOpen = styled.button`
     font-size: 48px;
     font-weight: 300;
     text-align: center;
-    border: 0.5px solid #000;
+    border: 0;
     border-radius: 0.25rem;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 3px #000000;
     cursor: pointer;
     margin: 2%;
     margin-left: -0.25vw;
@@ -145,6 +138,7 @@ const NavOpen = styled.button`
     &:hover {
         color: #000;
         background-color: ${(props) => props.hoverColor};
+        box-shadow: 0 0 5px #000000;
     }
 `;
 
@@ -163,7 +157,6 @@ const StyledOverlayDiv = styled.div`
 `;
 
 function Week5() {
-
     const [navOpen, setNavOpen] = useState(false);
 
     const handleClose = () => {
@@ -200,7 +193,6 @@ function Week5() {
                 break;
         }
     };
-
     const pageChangeDown = () => {
         switch (Page) {
             case 1:

@@ -7,6 +7,7 @@ import Week2 from "./components/week-2/Week2.js";
 import Week3 from "./components/week-3/Week3.js";
 import Week4 from "./components/week-4/Week4.js";
 import Week5 from "./components/week-5/week5.js";
+import Week6 from "./components/week-6/week6.js";
 
 // eslint-disable-next-line 
 import styling from "./style.css";
@@ -14,7 +15,7 @@ import styling from "./style.css";
 function ReturnToMain() {
   return (
       <nav>
-          <h1>Welcome to Interaction Design!</h1>
+          <h1>COM525: Interaction Design</h1>
           <ul>
               <li>
                   <Link to="/week-1">Week1</Link>
@@ -30,6 +31,9 @@ function ReturnToMain() {
               </li>
               <li>
                   <Link to="/week-5">Week5</Link>
+              </li>
+              <li>
+                  <Link to="/week-6">Week6</Link>
               </li>
           </ul>
       </nav>
@@ -55,6 +59,9 @@ function App() {
         </Route>
         <Route path="/week-5">
           <Week5 />
+        </Route>
+        <Route path="/week-6">
+          <Week6 />
         </Route>
         <Route path="/">
         </Route>
