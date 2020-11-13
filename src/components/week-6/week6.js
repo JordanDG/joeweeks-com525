@@ -21,12 +21,16 @@ const StyledMenu = styled.ul`
     justify-content: center;
     width: 180px;
     right: 0px;
+    top: 215px;
     margin-right: 2%;
-    margin-top: -1%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     position: absolute;
     background-color: #fff;
     z-index: 50;
+
+    @media (max-width: 1280px) {
+        top: 190px;
+    }
 
     & li {
         &:hover {
@@ -70,23 +74,39 @@ const StyledButton = styled.button`
 `;
 
 const StyledNavigationMenuContainer = styled.div`
-    width: 100%;
-    height: 9.7vh;
+    width: 100vw;
+    height: 12vh;
 `;
 
 const StyledNavMenu = styled.ul`
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: space-around;
-    width: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 80vw;
     float: right;
     font-size: 32px;
     font-weight: 300;
-    margin-top: 2.1%;
+    margin-top: 55px;
     margin-right: 0%;
 
+    @media (max-width: 1280px) {
+        margin-top: 30px;
+    }
+
+    @media (max-width: 1125px) {
+        margin-left: -20vw;
+    }
+
+    @media (max-width: 780px) {
+        margin-left: -20vw;
+    }
+
     & li {
+        @media (max-width: 1000px) {
+            margin-left: 50px;
+        }
+        margin-left: 100px;
         border-bottom: 3px solid transparent;
         cursor: pointer;
         transition: all 0.5s;
