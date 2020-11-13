@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9964e04ec902a7d2aa0433e6265c098",
+    "revision": "a53b4f5c9ed4a18021e21b92126604f9",
     "url": "/joeweeks-com525/index.html"
   },
   {
-    "revision": "c397a2825207096e1d26",
+    "revision": "23442befc6f6fbfc6776",
     "url": "/joeweeks-com525/static/css/main.209b162a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/joeweeks-com525/static/js/2.bfc903fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c397a2825207096e1d26",
-    "url": "/joeweeks-com525/static/js/main.986e2fed.chunk.js"
+    "revision": "23442befc6f6fbfc6776",
+    "url": "/joeweeks-com525/static/js/main.1b3e3fb1.chunk.js"
   },
   {
     "revision": "d4f0edb15ba4a72b3af3",
