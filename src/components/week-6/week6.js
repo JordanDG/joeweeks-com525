@@ -20,11 +20,9 @@ const StyledMenu = styled.ul`
     align-items: center;
     justify-content: center;
     width: 180px;
-    right: 0px;
-    top: 215px;
+    float: right;
     margin-right: 2%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    position: absolute;
     background-color: #fff;
     z-index: 50;
 
@@ -62,6 +60,7 @@ const StyledButton = styled.button`
     padding-top: 7px;
     float: right;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 2px;
 
     &:hover {
         color: #000;
@@ -71,10 +70,10 @@ const StyledButton = styled.button`
 
 const StyledNavigationMenuContainer = styled.div`
     width: 100vw;
-    height: 12vh;
+    height: 100px;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-end;
 `;
 
 const StyledNavMenu = styled.ul`
@@ -87,6 +86,7 @@ const StyledNavMenu = styled.ul`
     font-size: 32px;
     font-weight: 300;
     margin-right: 0%;
+    margin-bottom: 5px;
     @media (max-width: 768px) {
         justify-content: center;
     }
@@ -126,8 +126,9 @@ const StyledAlignmentIconographer = styled.div`
 
 const StyledPageContentsContainer = styled.div`
     width: 100vw;
-    height: 82vh;
+    height: 40vh;
     display: flex;
+    margin-top: 20vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
