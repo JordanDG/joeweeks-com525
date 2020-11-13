@@ -28,10 +28,6 @@ const StyledMenu = styled.ul`
     background-color: #fff;
     z-index: 50;
 
-    @media (max-width: 1280px) {
-        top: 190px;
-    }
-
     & li {
         &:hover {
             background-color: #e8e8e8
@@ -43,7 +39,7 @@ const StyledMenu = styled.ul`
         list-style: none;
         transition: all 0.5s ease-in-out;
         padding: 5px 0px;
-    }
+    
 `;
 
 const StyledButton = styled.button`
@@ -76,6 +72,9 @@ const StyledButton = styled.button`
 const StyledNavigationMenuContainer = styled.div`
     width: 100vw;
     height: 12vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 `;
 
 const StyledNavMenu = styled.ul`
@@ -87,31 +86,32 @@ const StyledNavMenu = styled.ul`
     float: right;
     font-size: 32px;
     font-weight: 300;
-    margin-top: 55px;
     margin-right: 0%;
-
-    @media (max-width: 1280px) {
-        margin-top: 30px;
+    @media (max-width: 768px) {
+        justify-content: center;
     }
-
-    @media (max-width: 1125px) {
-        margin-left: -20vw;
-    }
-
-    @media (max-width: 780px) {
-        margin-left: -20vw;
+    @media (max-width: 665px) {
+        justify-content: center;
+        flex-direction: column;
     }
 
     & li {
-        @media (max-width: 1000px) {
-            margin-left: 50px;
+        @media (max-width: 665px) {
+            width: 100%;
+            text-align: center;
         }
-        margin-left: 100px;
+        margin-left: 5vw;
         border-bottom: 3px solid transparent;
         cursor: pointer;
         transition: all 0.5s;
+        @media (max-width: 768px) {
+            margin-left: 3vw;
+        }
         &:hover {
             border-bottom: 3px solid #00D7A3;
+            @media (max-width: 665px) {
+                border-bottom: 3px solid transparent;
+            }
         }
     }
 `;
@@ -119,6 +119,9 @@ const StyledNavMenu = styled.ul`
 const StyledAlignmentIconographer = styled.div`
     padding-top: 2px;
     margin-left: -25px;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const StyledPageContentsContainer = styled.div`
