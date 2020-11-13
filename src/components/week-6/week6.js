@@ -141,30 +141,37 @@ function Week6() {;
 
     const onClickSetEnglish = () => {
         setLanguage("English");
+        setOpen(!open);
     }
 
     const onClickSetFrench = () => {
         setLanguage("French");
+        setOpen(!open);
     }
 
     const onClickSetGerman = () => {
         setLanguage("German");
+        setOpen(!open);
     }
     
     const onClickSetSpanish = () => {
         setLanguage("Spanish");
+        setOpen(!open);
     }
 
     const onClickSetSwedish = () => {
         setLanguage("Swedish");
+        setOpen(!open);
     } 
 
     const onClickSetRussian = () => {
         setLanguage("Russian");
+        setOpen(!open);
     } 
 
     const onClickSetChinese = () => {
         setLanguage("Chinese");
+        setOpen(!open);
     } 
 
     return (
