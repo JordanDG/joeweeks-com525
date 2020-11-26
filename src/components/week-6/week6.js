@@ -126,9 +126,10 @@ const StyledAlignmentIconographer = styled.div`
 
 const StyledPageContentsContainer = styled.div`
     width: 100vw;
-    height: 40vh;
+    height: 5vh;
     display: flex;
-    margin-top: 20vh;
+    text-align: center;
+    margin-top: 40vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;

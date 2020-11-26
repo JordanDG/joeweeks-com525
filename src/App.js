@@ -9,6 +9,8 @@ import Week4 from "./components/week-4/Week4.js";
 import Week5 from "./components/week-5/week5.js";
 import Week6 from "./components/week-6/week6.js";
 
+import Week8 from "./components/week-8/week8.js";
+
 // eslint-disable-next-line 
 import styling from "./style.css";
 
@@ -34,6 +36,9 @@ function ReturnToMain() {
               </li>
               <li>
                   <Link to="/week-6">Week6</Link>
+              </li>
+              <li>
+                  <Link to="/week-8">Week8</Link>
               </li>
           </ul>
       </nav>
@@ -62,6 +67,9 @@ function App() {
         </Route>
         <Route path="/week-6">
           <Week6 />
+        </Route>
+        <Route path="/week-8">
+          <Week8 />
         </Route>
         <Route path="/">
         </Route>
