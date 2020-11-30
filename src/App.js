@@ -8,8 +8,8 @@ import Week3 from "./components/week-3/Week3.js";
 import Week4 from "./components/week-4/Week4.js";
 import Week5 from "./components/week-5/week5.js";
 import Week6 from "./components/week-6/week6.js";
-
 import Week8 from "./components/week-8/week8.js";
+import Week9 from "./components/week-9/week9.js";
 
 // eslint-disable-next-line 
 import styling from "./style.css";
@@ -17,28 +17,31 @@ import styling from "./style.css";
 function ReturnToMain() {
   return (
       <nav>
-          <h1>COM525: Interaction Design</h1>
+          <h1>COM525: Interaction Design Components</h1>
           <ul>
               <li>
-                  <Link to="/week-1">Week1</Link>
+                  <Link to="/week-1">Week 1</Link>
               </li>
               <li>
-                  <Link to="/week-2">Week2</Link>
+                  <Link to="/week-2">Week 2</Link>
               </li>
               <li>
-                  <Link to="/week-3">Week3</Link>
+                  <Link to="/week-3">Week 3</Link>
               </li>
               <li>
-                  <Link to="/week-4">Week4</Link>
+                  <Link to="/week-4">Week 4</Link>
               </li>
               <li>
-                  <Link to="/week-5">Week5</Link>
+                  <Link to="/week-5">Week 5</Link>
               </li>
               <li>
-                  <Link to="/week-6">Week6</Link>
+                  <Link to="/week-6">Week 6</Link>
               </li>
               <li>
-                  <Link to="/week-8">Week8</Link>
+                  <Link to="/week-8">Week 8</Link>
+              </li>
+              <li>
+                  <Link to="/week-9">Week 9</Link>
               </li>
           </ul>
       </nav>
@@ -70,6 +73,9 @@ function App() {
         </Route>
         <Route path="/week-8">
           <Week8 />
+        </Route>
+        <Route path="/week-9">
+          <Week9 />
         </Route>
         <Route path="/">
         </Route>
