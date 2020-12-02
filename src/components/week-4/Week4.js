@@ -139,7 +139,6 @@ const StyledPasswordCheckbox = styled.div`
     width: 80%;
     height: 50px;
     margin-left: 10%;
-    margin-top: -5%;
 `;
 
 const PasswordRetentionCheckbox = styled.input`
@@ -277,11 +276,20 @@ const SuccessContinueButton = styled.button`
     }
 `;
 
+const PasswordResetConfirm = styled.p`
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5vh;
+`;
+
 function Week4() {;
 
     const [showPassword, setShowPassword] = useState(false);
+    const [start, setStart] = useState(true);
     const [submitted, setSubmitted] = useState(false);
     const [login, setLogin] = useState(false);
+    const [forgotPassword, setForgotPassword] = useState(false);
+    const [passwordRequest, setPasswordRequest] = useState(false);
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema)
@@ -303,6 +311,19 @@ function Week4() {;
     const Logout = () => {
         setSubmitted(false);
         setLogin(false);
+        setForgotPassword(false);
+        setPasswordRequest(false);
+        setStart(true);
+    }
+
+    const passwordForgotten = () => {
+        setForgotPassword(true)
+        setStart(false);
+    }
+
+    const passwordReset = () => {
+        setForgotPassword(false);
+        setPasswordRequest(true);
     }
 
     return (
@@ -327,7 +348,7 @@ function Week4() {;
             </div>
             )}
 
-            {!submitted && login && (
+            {login && (
                 <div>
                 <StyledTop>
                     <BackArrow>
@@ -347,7 +368,7 @@ function Week4() {;
                 </div>
             )}
 
-            {!submitted && !login && (
+            {!submitted && !login && start && (
             <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
                     <TopTitleLogin>
@@ -362,14 +383,14 @@ function Week4() {;
                     <StyledErrorMessage>{errors.email?.message}</StyledErrorMessage>
                 </StyledInputContainer>
                 <StyledInputContainer>
-                    <LoginInput placeholder="password" type={showPassword ? "text" : "password"} name="password" ref={register({ pattern: /^[a-zA-Z]\w{3,14}$/, minLength: 5, maxLength: 20 })} />
+                    <LoginInput required placeholder="password" type={showPassword ? "text" : "password"} name="password" ref={register({ pattern: /^[a-zA-Z]\w{3,14}$/, minLength: 5, maxLength: 20 })} />
                     <PasswordReveal src={showPassword ? ClosedEye : OpenEye} alt="Show / Hide Password" onClick={handleClick}/>
                     <StyledErrorMessage>{errors.password?.message}</StyledErrorMessage>
                 </StyledInputContainer>
                 <StyledPasswordCheckbox>
                     <PasswordRetentionCheckbox type="checkbox" />
                     <PasswordRetention>Remember Password</PasswordRetention>
-                    <PasswordForgot href="#resetpassword">FORGOT PASSWORD?</PasswordForgot>
+                    <PasswordForgot href="#resetpassword" onClick={passwordForgotten}>FORGOT PASSWORD?</PasswordForgot>
                 </StyledPasswordCheckbox>
                 <StyledSubmitContainer>
                     <SubmitButton type="submit">Submit</SubmitButton>
@@ -377,6 +398,50 @@ function Week4() {;
                 <SignupSplashContainer>
                     <SignUpPartOne>No Account?</SignUpPartOne>
                     <SignUpPartTwo href="#signup">Sign Up</SignUpPartTwo>
+                </SignupSplashContainer>
+            </form>
+            )}
+
+        {forgotPassword && !login && !start && (
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <StyledTop>
+                    <BackArrow>
+                        <FontAwesomeIcon icon={faChevronLeft} color="#000" fixedWidth onClick={Logout} />
+                    </BackArrow>
+                    <TopTitleLogin>
+                        <TopTitleTextLogin>Password Reset</TopTitleTextLogin>
+                    </TopTitleLogin>
+                </StyledTop>
+                <StyledIconSplash>
+                    <UserIcon src={UserIconSrc} alt="User Icon" />
+                </StyledIconSplash>
+                <StyledInputContainer>
+                    <LoginInput placeholder="username / email" type="text" name="email" ref={register({ minLength: 5, maxLength: 40 })} />
+                    <StyledErrorMessage>{errors.email?.message}</StyledErrorMessage>
+                </StyledInputContainer>
+                <StyledSubmitContainer>
+                    <SubmitButton type="submit" onClick={passwordReset}>Submit</SubmitButton>
+                </StyledSubmitContainer>
+            </form>
+            )}
+
+        {!forgotPassword && !login && !start && passwordRequest && (
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <StyledTop>
+                    <BackArrow>
+                        <FontAwesomeIcon icon={faChevronLeft} color="#000" fixedWidth onClick={Logout} />
+                    </BackArrow>
+                    <TopTitleLogin>
+                        <TopTitleTextLogin>Success</TopTitleTextLogin>
+                    </TopTitleLogin>
+                </StyledTop>
+                <StyledIconSplash>
+                    <UserIcon src={success} alt="User Icon" />
+                </StyledIconSplash>
+                <PasswordResetConfirm>Please check your email for further instructions</PasswordResetConfirm>
+                <SignupSplashContainer>
+                    <SignUpPartOne>Didn't Recieve?</SignUpPartOne>
+                    <SignUpPartTwo href="#signup">Resend</SignUpPartTwo>
                 </SignupSplashContainer>
             </form>
             )}
