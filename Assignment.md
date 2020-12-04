@@ -2,7 +2,7 @@
   Interaction Design (COM525) Component Production Portfolio
 </h1>
 
-![week1](C:\Users\Jordan\Desktop\ID_writeup\week1.PNG)
+![COM525 Main Menu](https://i.imgur.com/MghGUUz.png)
 
 <h3 align="center">
   Summary
@@ -16,7 +16,7 @@ This portfolio documents the research, planning and development of five interact
   Component 1: Buttons
 </h2>
 
-![Buttons_FINAL](C:\Users\Jordan\Desktop\ID_writeup\Buttons_FINAL.PNG)
+![Button Component Completed](https://i.imgur.com/HWJks92.png)
 
 <h3 align="center">
   Research
@@ -38,7 +38,7 @@ As a result of my research, common conventions of button design became clear. Be
 
 Material Design provides updated design guidelines for component development. Their documentation for buttons is extensive, including best practices for each state / button type (as mentioned prior.) Sizing specifications are also presented on the site, as shown below.
 
-![MaterialDesignButtons](C:\Users\Jordan\Desktop\ID_writeup\MaterialDesignButtons.PNG)
+![Material Design Buttons](https://i.imgur.com/Nr035YV.png)
 
 <h5 align="center">
   <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines</a>
@@ -191,7 +191,7 @@ Developing the components using props & scalable units allows for repeated use, 
   Component 2: Login Form
 </h2>
 
-![Final Login Form Designs](C:\Users\Jordan\Desktop\ID_writeup\LoginForm_FINAL.PNG)
+![Final Login Form Designs](https://i.imgur.com/oBLDXJU.png)
 
 <h3 align="center">
   Research
@@ -212,7 +212,7 @@ As confirmed by the Adobe Blog, "Successfully logging into their account is extr
 
 Design guidelines for login form design vary depending on their intended use. Generally, a clear emphasis on where to login & the information required to do so is essential. This could include providing users with placeholder text in each input box. Another design guideline necessary is the ability for users to toggle the discretion of their password, such as being able to reveal the text.
 
-​																					 ![password](C:\Users\Jordan\Desktop\ID_writeup\password.png)
+​																					 ![password example](https://i.imgur.com/uW6UR7f.png)
 
 As shown above, another design guideline is to allow for space to provide users with error messages to further assist their login / signing up process. This includes specified constraints or incorrect inputs from the user. As reaffirmed by Nomensa ([link](https://www.nomensa.com/blog/2010/ux-design-four-ways-display-error-messages), 2010), "The error message needs to be clear, precise, short and punchy. Users should be able to immediately understand what ‘mistakes they have made’ and how to recover the error." My login form will allow for the use of error messages and verification. 
 
@@ -222,11 +222,11 @@ As shown above, another design guideline is to allow for space to provide users 
 
 Figma was used to design & simulate a users login experience. The login form will be developed using a mobile first approach, with its intended implementation intended to be in a mobile application. This will be reflected in Figma using mobile-sized frames. The execution of this can be seen below. 
 
-![logindesign](C:\Users\Jordan\Desktop\ID_writeup\logindesign.png)
+![login design in Figma](https://i.imgur.com/cu0VLvg.png)
 
 Each row of screens is designed to accommodate each scenario a user can take. Shown below is the interactions used between pages to simulate a working prototype, along with a video of the working prototype. 
 
-![loginuse](C:\Users\Jordan\Desktop\ID_writeup\loginuse.png)
+![login design function in Figma](https://i.imgur.com/iqn8AcP.png)
 
 <iframe width="1060" height="520" src="https://www.youtube.com/embed/ULI6SPfJxdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -395,7 +395,7 @@ This component represented a resounding success. The component was fully functio
   Component 3: Dropdown Menu
 </h2>
 
-![DropdownMenu](C:\Users\Jordan\Desktop\ID_writeup\DropdownMenu.PNG)
+![Dropdown Menu final](https://i.imgur.com/8tFJjc5.png)
 
 <h3 align="center">
   Research
@@ -409,7 +409,7 @@ Dropdown menus are often used to toggle between states of various components or 
 
 Owing to the simplicity of the component, there are limited guidelines available regarding its usage. Guidelines focused mainly on its use, promoting accessibility as the primary reason for implementation. Being able to offer a wide range of accessibility options to users greatly broadens a websites audience, as identified by  the ONS ([link](https://www.ons.gov.uk/businessindustryandtrade/itandinternetindustry/bulletins/internetusers/2019#:~:text=91%25%20of%20adults%20in%20the,%2C%2078%25%20of%20disabled%20adults.), 2019) in saying "In 2019, the number of disabled adults who were recent internet users reached over 10 million for the first time, 78% of disabled adults." For this reason, I decided to focus my component on an accessibility feature. Sizing guidelines were later identified through Material Design, the likes of which can be seen below. 
 
-![materialdesigndropdown](C:\Users\Jordan\Desktop\ID_writeup\materialdesigndropdown.PNG)
+![material design dropdown](https://i.imgur.com/0veIq9G.png)
 
 <h5 align="center">
   <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines</a>
@@ -428,7 +428,7 @@ Once the thematic of accessibility was decided upon, the list of options quickly
 
 In this instance, a language selection was decided upon, as I believe it is essential to any website intending to appeal to an international audience. Whilst most websites adapt its contents to the users respective language upon loading the page, this component is purely to act as an additional option to change this. Whilst there is (potentially) no limit on how extensive this component could be (or simply put, how many languages it could support,) In the interest of simplicity this will be limited to 10 common languages internationally. Prototyping this in Figma was relatively easy, hover & click states were implemented to accommodate micro-interactions to communicate to the user their intended selection. This can be seen below.
 
-![dropdownprototype](C:\Users\Jordan\Desktop\ID_writeup\dropdownprototype.PNG)
+![dropdown menu Figma prototype](https://i.imgur.com/98dG88Y.png)
 
 <iframe width="1060" height="520" src="https://www.youtube.com/embed/2GY7DHYaOYk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
