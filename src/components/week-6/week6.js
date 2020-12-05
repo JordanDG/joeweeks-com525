@@ -50,7 +50,7 @@ const StyledButton = styled.button`
     justify-content: space-around;
     height: 50px;
     font-size: 26px;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     border: 0;
     border-radius: 0.25rem;
@@ -84,7 +84,7 @@ const StyledNavMenu = styled.ul`
     width: 80vw;
     float: right;
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 500;
     margin-right: 0%;
     margin-bottom: 5px;
     @media (max-width: 768px) {
@@ -119,6 +119,7 @@ const StyledNavMenu = styled.ul`
 const StyledAlignmentIconographer = styled.div`
     padding-top: 2px;
     margin-left: -25px;
+    font-weight: 500;
     @media (max-width: 768px) {
         display: none;
     }
@@ -133,6 +134,7 @@ const StyledPageContentsContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
 `;
 
 export const Menu = (props) => {

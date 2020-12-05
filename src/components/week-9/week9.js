@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
+import FeaturedImage from './assets/BackgroundColourImage.jpg';
+
 const time = '0.25s';
 const setAnimation = (from, to) => keyframes({ from: from, to: to });
 
@@ -21,9 +23,9 @@ const StyledButton = styled.div`
     background-color: #313130;
     color: #333;
     border-radius: 5rem;
-    border: solid 0.5rem;
-    height: 5rem;
-    width: 10rem;
+    padding: 0.5rem;
+    height: 3rem;
+    width: 6rem;
     margin-right: 10vw;
 `;
 
@@ -37,19 +39,19 @@ const ToggleContainer = styled.div`
 
 const StyledSwitch = styled.div`
     border-radius: 5rem;
-    animation: ${time} ${({ active }) => (active && setAnimation({marginLeft: 0, backgroundColor: '#fafafa', color: '#333'}, {marginLeft: '80px', backgroundColor: '#333', color: '#fff'})) || (!active && setAnimation({marginLeft: '80px', backgroundColor: '#333', color: '#fff'}, {marginLeft: 0, backgroundColor: '#fafafa', color: '#333'}))} linear;
+    animation: ${time} ${({ active }) => (active && setAnimation({marginLeft: 0, backgroundColor: '#fafafa', color: '#333'}, {marginLeft: '47px', backgroundColor: '#333', color: '#fff'})) || (!active && setAnimation({marginLeft: '47px', backgroundColor: '#333', color: '#fff'}, {marginLeft: 0, backgroundColor: '#fafafa', color: '#333'}))} linear;
     animation-fill-mode: forwards;
-    height: 4rem;
-    width: 4rem;
+    height: 2rem;
+    width: 2rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
 `;
 
 const NavMenu = styled.ul`
-    width: 50vw;
+    width: 60vw;
     margin-left: 10vw;
 
     & li {
@@ -78,7 +80,7 @@ const NavMenu = styled.ul`
 
 const ContentContainer = styled.div`
     width: 80%;
-    height: 65vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
