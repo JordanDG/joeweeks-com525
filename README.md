@@ -412,7 +412,9 @@ This component represented a resounding success. The component was fully functio
 <h2 align="center">
   Component 3: Dropdown Menu
 </h2>
-![Dropdown Menu final](https://i.imgur.com/8tFJjc5.png)
+<p align="center">
+  <img src="https://i.imgur.com/8tFJjc5.png" alt="Completed Dropdown Menu Component">
+</p>
 
 <h3 align="center">
   Research
