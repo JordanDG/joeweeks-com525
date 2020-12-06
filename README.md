@@ -245,7 +245,7 @@ Each row of screens is designed to accommodate each scenario a user can take. Sh
 
 [![](https://i.imgur.com/UE7qE35.png)](https://youtu.be/ULI6SPfJxdA)
 <h5 align="center">
-  <a href="https://youtu.be/H9O7x9IBKOQ">Login Form Component Prototype Video Link</a>
+  <a href="https://youtu.be/ULI6SPfJxdA">Login Form Component Prototype Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -767,7 +767,9 @@ A common usage case for toggle switches is the ability to toggle a colour scheme
 
 There are a number of guidelines & principles regarding the design of a toggle switch. Toggle switches should always display a default value, with labels being clear & indicative of their use.  Actions triggered as a result of the toggle should take effect immediately, to clearly communicate to the user that their action was successful. Remaining consistent to commonly used design systems is essential to the ease of use. Ensuring the toggle consists of two clearly defined states, with a toggle being visually represented by the circle sliding to the opposite side it was on prior. Examples of this can be seen below.
 
-![](https://uxmovement.com/wp-content/uploads/2019/08/toggle-system-state.png)
+<p align="center">
+  <img src="https://uxmovement.com/wp-content/uploads/2019/08/toggle-system-state.png" alt="Toggle Switches In Action">
+</p>
 <h5 align="center">
   <a href="https://uxmovement.com/mobile/stop-misusing-toggle-switches/">Toggle Switches In Action Source Link</a>
 </h5>
