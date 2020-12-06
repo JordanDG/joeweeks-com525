@@ -745,7 +745,6 @@ Unlike my previous components, I am not overall totally content with the outcome
 <h5 align="center">
   <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes Source Link</a>
 </h5>
----
 
 <h2 align="center">
   Component 5: Toggle Switch
