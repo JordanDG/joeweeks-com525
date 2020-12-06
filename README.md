@@ -13,6 +13,7 @@ This portfolio documents the research, planning and development of five interact
 <p align="center">
   <a href="https://jordandg.dev/joeweeks-com525/">The link to view these components can be found here</a>
 </p>
+
 ---
 
 <h2 align="center">
