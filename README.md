@@ -438,7 +438,7 @@ Owing to the simplicity of the component, there are limited guidelines available
 
 ![material design dropdown](https://i.imgur.com/0veIq9G.png)
 <h5 align="center">
-  <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines</a>
+  <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines LINK</a>
 </h5>
 
 <h3 align="center">
@@ -458,7 +458,7 @@ In this instance, a language selection was decided upon, as I believe it is esse
 
 [![](https://i.imgur.com/ooGBZLf.png)](https://youtu.be/2GY7DHYaOYk)
 <h5 align="center">
-  <a href="https://youtu.be/2GY7DHYaOYk">Dropdown Menu prototype Example LINK</a>
+  <a href="https://youtu.be/2GY7DHYaOYk">Dropdown Menu prototype Example Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -585,7 +585,7 @@ The above process was also repeated for each language, with the appropriately mo
 
 [![](https://i.imgur.com/B9HIuKU.png)](https://youtu.be/ytzvy7p7XEw)
 <h5 align="center">
-  <a href="https://youtu.be/ytzvy7p7XEw">Dropdown Menu Working Example LINK</a>
+  <a href="https://youtu.be/ytzvy7p7XEw">Dropdown Menu Working Example Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -617,7 +617,7 @@ As stated by Material Design ([link](https://material.io/components/dialogs#usag
 
 ![exampledeletebutton](C:\Users\Jordan\Desktop\ID_writeup\exampledeletebutton.png)
 <h5 align="center">
-  <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Modal Dialog Box Design Guidelines LINK</a>
+  <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Example Modal Alert Box Source Link</a>
 </h5>
 
 <h3 align="center">
@@ -632,7 +632,7 @@ As shown here, the right screen is designed to emulate a functional website, whi
 
 [![](https://i.imgur.com/Hglp8Lx.png)](https://youtu.be/lP1rFW23TE4)
 <h5 align="center">
-  <a href="https://youtu.be/lP1rFW23TE4">Modal Dialog Box Prototype Example LINK</a>
+  <a href="https://youtu.be/lP1rFW23TE4">Modal Dialog Box Prototype Example Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -724,7 +724,7 @@ A basic toggling state was used to display the modal dialog box. This could also
 
 [![](https://i.imgur.com/LMYYbZj.png)](https://youtu.be/xkQ-BU5HR08)
 <h5 align="center">
-  <a href="https://youtu.be/xkQ-BU5HR08">Modal Dialog Box Working Example Video LINK</a>
+  <a href="https://youtu.be/xkQ-BU5HR08">Modal Dialog Box Working Example Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -735,7 +735,7 @@ Unlike my previous components, I am not overall totally content with the outcome
 
 ![dialogs](C:\Users\Jordan\Desktop\ID_writeup\dialogs.PNG)
 <h5 align="center">
-  <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes</a>
+  <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes Source Link</a>
 </h5>
 ---
 
@@ -762,7 +762,7 @@ There are a number of guidelines & principles regarding the design of a toggle s
 ![](https://uxmovement.com/wp-content/uploads/2019/08/toggle-system-state.png)
 
 <h5 align="center">
-  <a href="https://uxmovement.com/mobile/stop-misusing-toggle-switches/">Toggle Switches In Action</a>
+  <a href="https://uxmovement.com/mobile/stop-misusing-toggle-switches/">Toggle Switches In Action Source Link</a>
 </h5>
 
 A toggle switch is only appropriate if the following conditions are met: ([link](https://uxmovement.com/mobile/stop-misusing-toggle-switches/), 2019)
@@ -783,7 +783,7 @@ As seen in the image above, the usage of the toggle switch is emulated by creati
 
 [![](https://i.imgur.com/Om3ycD8.png)](https://youtu.be/rXzXDssnhAs)
 <h5 align="center">
-  <a href="https://youtu.be/rXzXDssnhAs">Toggle Switch Working Prototype Video LINK</a>
+  <a href="https://youtu.be/rXzXDssnhAs">Toggle Switch Working Prototype Video Link</a>
 </h5>
 
 <h3 align="center">
@@ -866,7 +866,7 @@ const Toggle = (props) => {
 
 [![](https://i.imgur.com/Ts8ZWtg.png)](https://youtu.be/w94FCPwoAMg)
 <h5 align="center">
-  <a href="https://youtu.be/w94FCPwoAMg">Toggle Switch Working Prototype Video LINK</a>
+  <a href="https://youtu.be/w94FCPwoAMg">Toggle Switch Working Prototype Video Link</a>
 </h5>
 
 <h3 align="center">
