@@ -42,7 +42,7 @@ Material Design provides updated design guidelines for component development. Th
   <img src="https://i.imgur.com/Nr035YV.png" alt="button design guidelines">
 </p>
 <h5 align="center">
-  <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines LINK</a>
+  <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines Source Link</a>
 </h5>
 
 Opting for a user-centric design methodology appears to be essential. Design constraints such as sizing, text formatting and colour theory are all considerations covered by the Material Design guidelines. Whilst the guidelines further elaborate on each of these, the clear indication was to ensure buttons appeared to enhance the page, without becoming the central focus of it. Strong calls to action such as primary buttons, allow pointed and targeted information to be presented to users, as clarified by O'Reilly ([Link](https://www.oreilly.com/library/view/ux-for-beginners/9781491912676/ch67.html), 2020) when stating "Buttons that execute primary actions - primary buttons -should be as visible as possible". Typography used in modern button development is often capitalized to ensure clarity and present this call to action as significant. Proportionate typography & clear colour schemes are also essential, whilst indication of state changes (such as hovering) is often achieved through colour changes or size manipulation. 
@@ -192,7 +192,7 @@ Developing the components using props & scalable units allows for repeated use, 
   <img src="https://i.imgur.com/DIXNUtg.png" alt="Google Icon Menu">
 </p>
 <h5 align="center">
-  <a href="https://www.google.co.uk/">Google Mobile Icon Menu LINK</a>
+  <a href="https://www.google.co.uk/">Google Mobile Icon Menu Source Link</a>
 </h5>
 
 ---
@@ -226,7 +226,7 @@ Design guidelines for login form design vary depending on their intended use. Ge
   <img src="https://i.imgur.com/uW6UR7f.png" alt="password example">
 </p>
 <h5 align="center">
-  <a href="https://uxplanet.org/18-ux-design-tips-for-registration-and-login-forms-f897557358ba">Login Form Password Guidelines LINK</a>
+  <a href="https://uxplanet.org/18-ux-design-tips-for-registration-and-login-forms-f897557358ba">Login Form Password Guidelines Source Link</a>
 </h5>
 
 As shown above, another design guideline is to allow for space to provide users with error messages to further assist their login / signing up process. This includes specified constraints or incorrect inputs from the user. As reaffirmed by Nomensa ([link](https://www.nomensa.com/blog/2010/ux-design-four-ways-display-error-messages), 2010), "The error message needs to be clear, precise, short and punchy. Users should be able to immediately understand what ‘mistakes they have made’ and how to recover the error." My login form will allow for the use of error messages and verification. 
@@ -438,7 +438,7 @@ Owing to the simplicity of the component, there are limited guidelines available
 
 ![material design dropdown](https://i.imgur.com/0veIq9G.png)
 <h5 align="center">
-  <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines LINK</a>
+  <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines Source Link</a>
 </h5>
 
 <h3 align="center">
