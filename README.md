@@ -599,7 +599,9 @@ Further feedback received post-production identified that further indication of 
 <h2 align="center">
   Component 4: Modal Dialog box
 </h2>
-![modalfinal](https://i.imgur.com/NK9GQBs.png)
+<p align="center">
+  <img src="https://i.imgur.com/NK9GQBs.png" alt="modalfinal">
+</p>
 
 <h3 align="center">
      Research
