@@ -739,7 +739,9 @@ A basic toggling state was used to display the modal dialog box. This could also
 
 Unlike my previous components, I am not overall totally content with the outcome of this component. From a conceptual point of view, it is fully functional and achieves what is expected of it, however it lacks the detail & complexity to validate itself as an advanced component. The main aspect missing from the component is the lack of any real verification on the email input area of the component. I also feel that the component could be far more fluid in its animation both entering and exiting the screen. If I was to undertake the design process of this component again, I wouldn't attempt to create a newsletter or cookies modal dialog box, but instead focus on emulating a mobile application, utilising multiple instances of simpler dialog boxes, such as those displayed below. 
 
-![dialogs](C:\Users\Jordan\Desktop\ID_writeup\dialogs.PNG)
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/nBuWrDz9MnuNuGe8avYDyiuDqYcZXDZgP1j8neLVIrv6CxLCwCkaVMsw5rU5w0Hsv9_7xuLESP7EfQpWpmyfgTJ6hSdcPifRCAuG72A=w1064-v0" alt="dialogs">
+</p>
 <h5 align="center">
   <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes Source Link</a>
 </h5>
@@ -748,8 +750,9 @@ Unlike my previous components, I am not overall totally content with the outcome
 <h2 align="center">
   Component 5: Toggle Switch
 </h2>
-
-![togglefinal](C:\Users\Jordan\Desktop\ID_writeup\togglefinal.PNG)
+<p align="center">
+  <img src="https://i.imgur.com/CSxf2Vz.png" alt="togglefinal">
+</p>
 
 <h3 align="center">
      Research
@@ -766,7 +769,6 @@ A common usage case for toggle switches is the ability to toggle a colour scheme
 There are a number of guidelines & principles regarding the design of a toggle switch. Toggle switches should always display a default value, with labels being clear & indicative of their use.  Actions triggered as a result of the toggle should take effect immediately, to clearly communicate to the user that their action was successful. Remaining consistent to commonly used design systems is essential to the ease of use. Ensuring the toggle consists of two clearly defined states, with a toggle being visually represented by the circle sliding to the opposite side it was on prior. Examples of this can be seen below.
 
 ![](https://uxmovement.com/wp-content/uploads/2019/08/toggle-system-state.png)
-
 <h5 align="center">
   <a href="https://uxmovement.com/mobile/stop-misusing-toggle-switches/">Toggle Switches In Action Source Link</a>
 </h5>
