@@ -41,9 +41,8 @@ Material Design provides updated design guidelines for component development. Th
 <p align="center">
   <img src="https://i.imgur.com/Nr035YV.png" alt="button design guidelines">
 </p>
-
 <h5 align="center">
-  <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines</a>
+  <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines LINK</a>
 </h5>
 
 Opting for a user-centric design methodology appears to be essential. Design constraints such as sizing, text formatting and colour theory are all considerations covered by the Material Design guidelines. Whilst the guidelines further elaborate on each of these, the clear indication was to ensure buttons appeared to enhance the page, without becoming the central focus of it. Strong calls to action such as primary buttons, allow pointed and targeted information to be presented to users, as clarified by O'Reilly ([Link](https://www.oreilly.com/library/view/ux-for-beginners/9781491912676/ch67.html), 2020) when stating "Buttons that execute primary actions - primary buttons -should be as visible as possible". Typography used in modern button development is often capitalized to ensure clarity and present this call to action as significant. Proportionate typography & clear colour schemes are also essential, whilst indication of state changes (such as hovering) is often achieved through colour changes or size manipulation. 
@@ -187,7 +186,12 @@ Initial feedback on my designs from classmates indicated that the colour palette
 
 Developing the components using props & scalable units allows for repeated use, making them easily adaptable to any use scenario. The main critique I have of my components, and the change I'd make to my approach, had I the opportunity, would be to use a full icon menu. As stated by Joe Natoli, "For mobile use, icons make excellent touch targets. When sized large enough (e.g. 48 px), they’re easily activated. And as a bonus, this also makes it very easy to hit them with a desktop or laptop cursor." ([Link](https://givegoodux.com/the-right-way-to-use-icons-in-your-ui/), 2020). An example of an icon menu can be seen below. This type of menu is prominent in mobile applications.
 
-![Google Icon Menu](https://i.imgur.com/DIXNUtg.png)
+<p align="center">
+  <img src="https://i.imgur.com/DIXNUtg.png" alt="Google Icon Menu">
+</p>
+<h5 align="center">
+  <a href="https://www.google.co.uk/">Google Mobile Icon Menu LINK</a>
+</h5>
 
 ---
 
@@ -216,7 +220,12 @@ As confirmed by the Adobe Blog, "Successfully logging into their account is extr
 
 Design guidelines for login form design vary depending on their intended use. Generally, a clear emphasis on where to login & the information required to do so is essential. This could include providing users with placeholder text in each input box. Another design guideline necessary is the ability for users to toggle the discretion of their password, such as being able to reveal the text.
 
-​																					 ![password example](https://i.imgur.com/uW6UR7f.png)
+<p align="center">
+  <img src="https://i.imgur.com/uW6UR7f.png" alt="password example">
+</p>
+<h5 align="center">
+  <a href="https://uxplanet.org/18-ux-design-tips-for-registration-and-login-forms-f897557358ba">Login Form Password Guidelines LINK</a>
+</h5>
 
 As shown above, another design guideline is to allow for space to provide users with error messages to further assist their login / signing up process. This includes specified constraints or incorrect inputs from the user. As reaffirmed by Nomensa ([link](https://www.nomensa.com/blog/2010/ux-design-four-ways-display-error-messages), 2010), "The error message needs to be clear, precise, short and punchy. Users should be able to immediately understand what ‘mistakes they have made’ and how to recover the error." My login form will allow for the use of error messages and verification. 
 
@@ -232,7 +241,10 @@ Each row of screens is designed to accommodate each scenario a user can take. Sh
 
 ![login design function in Figma](https://i.imgur.com/iqn8AcP.png)
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/ULI6SPfJxdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/UE7qE35.png)](https://youtu.be/ULI6SPfJxdA)
+<h5 align="center">
+  <a href="https://youtu.be/H9O7x9IBKOQ">Login Form Component Prototype Video Link</a>
+</h5>
 
  <h3 align="center">
      Coding
@@ -386,8 +398,10 @@ const [showPassword, setShowPassword] = useState(false);
      Working Component Video: Login Form
 </h3>
 
-
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/PB02KFfZp0o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/mm8seVd.png)](https://youtu.be/PB02KFfZp0o)
+<h5 align="center">
+  <a href="https://youtu.be/PB02KFfZp0o">Login Form Component Prototype Video Link</a>
+</h5>
 
   <h3 align="center">
      Feedback & Reflection
@@ -398,7 +412,6 @@ This component represented a resounding success. The component was fully functio
 <h2 align="center">
   Component 3: Dropdown Menu
 </h2>
-
 ![Dropdown Menu final](https://i.imgur.com/8tFJjc5.png)
 
 <h3 align="center">
@@ -414,7 +427,6 @@ Dropdown menus are often used to toggle between states of various components or 
 Owing to the simplicity of the component, there are limited guidelines available regarding its usage. Guidelines focused mainly on its use, promoting accessibility as the primary reason for implementation. Being able to offer a wide range of accessibility options to users greatly broadens a websites audience, as identified by  the ONS ([link](https://www.ons.gov.uk/businessindustryandtrade/itandinternetindustry/bulletins/internetusers/2019#:~:text=91%25%20of%20adults%20in%20the,%2C%2078%25%20of%20disabled%20adults.), 2019) in saying "In 2019, the number of disabled adults who were recent internet users reached over 10 million for the first time, 78% of disabled adults." For this reason, I decided to focus my component on an accessibility feature. Sizing guidelines were later identified through Material Design, the likes of which can be seen below. 
 
 ![material design dropdown](https://i.imgur.com/0veIq9G.png)
-
 <h5 align="center">
   <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines</a>
 </h5>
@@ -434,7 +446,10 @@ In this instance, a language selection was decided upon, as I believe it is esse
 
 ![dropdown menu Figma prototype](https://i.imgur.com/98dG88Y.png)
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/2GY7DHYaOYk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/ooGBZLf.png)](https://youtu.be/2GY7DHYaOYk)
+<h5 align="center">
+  <a href="https://youtu.be/2GY7DHYaOYk">Dropdown Menu prototype Example LINK</a>
+</h5>
 
  <h3 align="center">
   Coding
@@ -548,13 +563,16 @@ const [open, setOpen] = useState(false);
             )}
 ```
 
-  <h3 align="center">
+<h3 align="center">
      Working Component Video: Dropdown Menu
 </h3>
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/ytzvy7p7XEw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/B9HIuKU.png)](https://youtu.be/ytzvy7p7XEw)
+<h5 align="center">
+  <a href="https://youtu.be/ytzvy7p7XEw">Dropdown Menu Working Example LINK</a>
+</h5>
 
-  <h3 align="center">
+<h3 align="center">
      Feedback & Reflection
 </h3>
 
@@ -565,7 +583,6 @@ Further feedback received post-production identified that further indication of 
 <h2 align="center">
   Component 4: Modal Dialog box
 </h2>
-
 ![modalfinal](C:\Users\Jordan\Desktop\ID_writeup\modalfinal.PNG)
 
 <h3 align="center">
@@ -583,9 +600,8 @@ Another essential use for modal dialog boxes is through notifying users of a web
 As stated by Material Design ([link](https://material.io/components/dialogs#usage), 2020), "Dialogs are purposefully interruptive, so they should be used sparingly." It quickly became clear that the response a user chooses to take regarding the dialog box, should not negatively impact their ability to interact with the website. Smooth entry and exit transitions were notably present in all guideline documentation presented, despite being solely for aesthetics. Having clear and visible information presented to the user immediately is also essential, as well as a method for closing the pop-up swiftly, to ensure it remains as unintrusive as possible. Information gleaned from the guidelines presented to me focus on ensuring relevant information is conveyed in a visually appealing - yet clear, manner, while not inherently negatively impacting the users experience whilst using the site. Dialog boxes are essential aspects of any mobile application, with any action taken on most popular applications being accompanied by a dialog box, often acting as a confirmation or a request for information, such as adding a new contact. 
 
 ![exampledeletebutton](C:\Users\Jordan\Desktop\ID_writeup\exampledeletebutton.png)
-
 <h5 align="center">
-  <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Example Modal Alert Box</a>
+  <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Modal Dialog Box Design Guidelines LINK</a>
 </h5>
 
 <h3 align="center">
@@ -598,9 +614,12 @@ During the planning stage, I established that my dialog box would prompt users t
 
 As shown here, the right screen is designed to emulate a functional website, which for the purpose of replicating the modal dialog, also provides a prompt button to display the dialog box. The second screen is then projected on top of the page, only closing if the user interacts with the close button. 
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/lP1rFW23TE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/Hglp8Lx.png)](https://youtu.be/lP1rFW23TE4)
+<h5 align="center">
+  <a href="https://youtu.be/lP1rFW23TE4">Modal Dialog Box Prototype Example LINK</a>
+</h5>
 
- <h3 align="center">
+<h3 align="center">
   Coding
 </h3>
 
@@ -683,12 +702,14 @@ function Week8() {
 
 A basic toggling state was used to display the modal dialog box. This could also be closed using the appropriate methods once the dialog box was visible.
 
-  <h3 align="center">
+<h3 align="center">
      Working Component Video: Modal Dialog Box
 </h3>
 
-
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/xkQ-BU5HR08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/LMYYbZj.png)](https://youtu.be/xkQ-BU5HR08)
+<h5 align="center">
+  <a href="https://youtu.be/xkQ-BU5HR08">Modal Dialog Box Working Example Video LINK</a>
+</h5>
 
 <h3 align="center">
      Feedback & Reflection
@@ -697,7 +718,6 @@ A basic toggling state was used to display the modal dialog box. This could also
 Unlike my previous components, I am not overall totally content with the outcome of this component. From a conceptual point of view, it is fully functional and achieves what is expected of it, however it lacks the detail & complexity to validate itself as an advanced component. The main aspect missing from the component is the lack of any real verification on the email input area of the component. I also feel that the component could be far more fluid in its animation both entering and exiting the screen. If I was to undertake the design process of this component again, I wouldn't attempt to create a newsletter or cookies modal dialog box, but instead focus on emulating a mobile application, utilising multiple instances of simpler dialog boxes, such as those displayed below. 
 
 ![dialogs](C:\Users\Jordan\Desktop\ID_writeup\dialogs.PNG)
-
 <h5 align="center">
   <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes</a>
 </h5>
@@ -745,9 +765,12 @@ Whilst documenting the design in Figma was not difficult to do (along with the a
 
 As seen in the image above, the usage of the toggle switch is emulated by creating two identical pages (only differentiating by the changes the switch would cause) and navigating between the two pages based when a user clicks or drags. 
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/rXzXDssnhAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/Om3ycD8.png)](https://youtu.be/rXzXDssnhAs)
+<h5 align="center">
+  <a href="https://youtu.be/rXzXDssnhAs">Toggle Switch Working Prototype Video LINK</a>
+</h5>
 
- <h3 align="center">
+<h3 align="center">
   Coding
 </h3>
 
@@ -821,11 +844,14 @@ const Toggle = (props) => {
     }
 ```
 
-  <h3 align="center">
+<h3 align="center">
      Working Component Video: Toggle Switch
 </h3>
 
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/w94FCPwoAMg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/Ts8ZWtg.png)](https://youtu.be/w94FCPwoAMg)
+<h5 align="center">
+  <a href="https://youtu.be/w94FCPwoAMg">Toggle Switch Working Prototype Video LINK</a>
+</h5>
 
 <h3 align="center">
      Feedback & Reflection
