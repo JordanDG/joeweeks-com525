@@ -617,7 +617,9 @@ Another essential use for modal dialog boxes is through notifying users of a web
 
 As stated by Material Design ([link](https://material.io/components/dialogs#usage), 2020), "Dialogs are purposefully interruptive, so they should be used sparingly." It quickly became clear that the response a user chooses to take regarding the dialog box, should not negatively impact their ability to interact with the website. Smooth entry and exit transitions were notably present in all guideline documentation presented, despite being solely for aesthetics. Having clear and visible information presented to the user immediately is also essential, as well as a method for closing the pop-up swiftly, to ensure it remains as unintrusive as possible. Information gleaned from the guidelines presented to me focus on ensuring relevant information is conveyed in a visually appealing - yet clear, manner, while not inherently negatively impacting the users experience whilst using the site. Dialog boxes are essential aspects of any mobile application, with any action taken on most popular applications being accompanied by a dialog box, often acting as a confirmation or a request for information, such as adding a new contact. 
 
-![exampledeletebutton](C:\Users\Jordan\Desktop\ID_writeup\exampledeletebutton.png)
+<p align="center">
+  <img src="https://miro.medium.com/max/700/1*u-PKrM6xROs5P5Gihurkwg.png" alt="exampledeletebutton">
+</p>
 <h5 align="center">
   <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Example Modal Alert Box Source Link</a>
 </h5>
@@ -628,7 +630,9 @@ As stated by Material Design ([link](https://material.io/components/dialogs#usag
 
 During the planning stage, I established that my dialog box would prompt users to sign up to a newsletter or subscribe to regular updates. It would enable them to do this by providing a name & an email, through which they would receive communications. Utilizing the same shade of green present in all other components throughout the portfolio allows for cohesion and easy implementation onto a live website. Prototyping took place in Figma, utilizing the overlay feature to simulate a modal dialog box appearing over a websites contents. This simulation worked flawlessly, almost perfectly replicating the intended design. A video of this can be seen below.
 
-![modaldialogprototype](C:\Users\Jordan\Desktop\ID_writeup\modaldialogprototype.PNG)
+<p align="center">
+  <img src="https://i.imgur.com/Ii4tNvx.png" alt="modaldialogprototype">
+</p>
 
 As shown here, the right screen is designed to emulate a functional website, which for the purpose of replicating the modal dialog, also provides a prompt button to display the dialog box. The second screen is then projected on top of the page, only closing if the user interacts with the close button. 
 
