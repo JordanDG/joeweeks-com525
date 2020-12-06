@@ -10,6 +10,9 @@
 
 This portfolio documents the research, planning and development of five interactive React components commonly used in modern web development. Video evidence of each component working alongside the coding required to accomplish this is also presented. The five chosen components are interactive and scalable, to allow for usage on multiple platforms.
 
+<p align="center">
+  <a href="https://jordandg.dev/joeweeks-com525/">The link to view these components can be found here</a>
+</p>
 ---
 
 <h2 align="center">
