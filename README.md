@@ -47,7 +47,7 @@ Material Design provides updated design guidelines for component development. Th
 
 Opting for a user-centric design methodology appears to be essential. Design constraints such as sizing, text formatting and colour theory are all considerations covered by the Material Design guidelines. Whilst the guidelines further elaborate on each of these, the clear indication was to ensure buttons appeared to enhance the page, without becoming the central focus of it. Strong calls to action such as primary buttons, allow pointed and targeted information to be presented to users, as clarified by O'Reilly ([Link](https://www.oreilly.com/library/view/ux-for-beginners/9781491912676/ch67.html), 2020) when stating "Buttons that execute primary actions - primary buttons -should be as visible as possible". Typography used in modern button development is often capitalized to ensure clarity and present this call to action as significant. Proportionate typography & clear colour schemes are also essential, whilst indication of state changes (such as hovering) is often achieved through colour changes or size manipulation. 
 
- <h3 align="center">
+<h3 align="center">
   Planning & design prototyping
 </h3>
 
@@ -55,7 +55,7 @@ To accommodate all current styles of button designs, 3 variants were prototyped.
 
 ![Button prototyping In Figma](https://i.imgur.com/kwsKDXJ.png)
 
- <h3 align="center">
+<h3 align="center">
      Coding
 </h3>
 
@@ -180,7 +180,7 @@ function Week3() {
   <a href="https://youtu.be/H9O7x9IBKOQ">Working Button Component Video Link</a>
 </h5>
 
- <h3 align="center">
+<h3 align="center">
      Feedback & Reflection
 </h3>
 
@@ -231,7 +231,7 @@ Design guidelines for login form design vary depending on their intended use. Ge
 
 As shown above, another design guideline is to allow for space to provide users with error messages to further assist their login / signing up process. This includes specified constraints or incorrect inputs from the user. As reaffirmed by Nomensa ([link](https://www.nomensa.com/blog/2010/ux-design-four-ways-display-error-messages), 2010), "The error message needs to be clear, precise, short and punchy. Users should be able to immediately understand what ‘mistakes they have made’ and how to recover the error." My login form will allow for the use of error messages and verification. 
 
- <h3 align="center">
+<h3 align="center">
   Planning & design prototyping
 </h3>
 
@@ -248,7 +248,7 @@ Each row of screens is designed to accommodate each scenario a user can take. Sh
   <a href="https://youtu.be/H9O7x9IBKOQ">Login Form Component Prototype Video Link</a>
 </h5>
 
- <h3 align="center">
+<h3 align="center">
      Coding
 </h3>
 
@@ -411,7 +411,7 @@ Conditional rendering was utilized to display the various necessary screens (suc
   <a href="https://youtu.be/PB02KFfZp0o">Login Form Component Prototype Video Link</a>
 </h5>
 
-  <h3 align="center">
+<h3 align="center">
      Feedback & Reflection
 </h3>
 
@@ -441,7 +441,7 @@ Owing to the simplicity of the component, there are limited guidelines available
   <a href="https://material.io/components/menus#specs">Full Dropdown Menu Design Guidelines</a>
 </h5>
 
- <h3 align="center">
+<h3 align="center">
   Planning & design prototyping
 </h3>
 
@@ -461,7 +461,7 @@ In this instance, a language selection was decided upon, as I believe it is esse
   <a href="https://youtu.be/2GY7DHYaOYk">Dropdown Menu prototype Example LINK</a>
 </h5>
 
- <h3 align="center">
+<h3 align="center">
   Coding
 </h3>
 
@@ -771,7 +771,7 @@ A toggle switch is only appropriate if the following conditions are met: ([link]
 - it'd be "Presenting binary options, not opposing ones".
 - and its use would be in "activating a state, not performing an action"
 
- <h3 align="center">
+<h3 align="center">
   Planning & design prototyping
 </h3>
 
