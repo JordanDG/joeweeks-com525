@@ -172,8 +172,7 @@ function Week3() {
      Working Component Video: Buttons
 </h3>
 
-
-<iframe width="1060" height="520" src="https://www.youtube.com/embed/H9O7x9IBKOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://i.imgur.com/kzUtpph.png)](https://www.youtube.com/watch?v=H9O7x9IBKOQ&feature=youtu.be)
 
  <h3 align="center">
      Feedback & Reflection
