@@ -38,7 +38,9 @@ As a result of my research, common conventions of button design became clear. Be
 
 Material Design provides updated design guidelines for component development. Their documentation for buttons is extensive, including best practices for each state / button type (as mentioned prior.) Sizing specifications are also presented on the site, as shown below.
 
-![Material Design Buttons](https://i.imgur.com/Nr035YV.png)
+<p align="center">
+  ![Material Design Buttons](https://i.imgur.com/Nr035YV.png)
+</p>
 
 <h5 align="center">
   <a href="https://material.io/components/buttons#specs">Full Button Design Guidelines</a>
