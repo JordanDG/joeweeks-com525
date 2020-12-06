@@ -784,7 +784,9 @@ A toggle switch is only appropriate if the following conditions are met: ([link]
 
 Whilst documenting the design in Figma was not difficult to do (along with the animated user interactions using states), Further thought had to be considered on the best approach for developing the functional component. Unlike other components featured, the lack of official support through an HTML element infers that a bespoke element must be created using existing HTML features (such as divs), styling to position and size it, and react state management to toggle between the two options. The Figma prototype can be seen below:
 
-![toggleswitchplanning](C:\Users\Jordan\Desktop\ID_writeup\toggleswitchplanning.PNG)
+<p align="center">
+  <img src="https://i.imgur.com/1Z34pw1.png" alt="toggleswitchplanning">
+</p>
 
 As seen in the image above, the usage of the toggle switch is emulated by creating two identical pages (only differentiating by the changes the switch would cause) and navigating between the two pages based when a user clicks or drags. 
 
