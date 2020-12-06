@@ -124,6 +124,8 @@ const ButtonRounded = (props) => {
 };
 ```
 
+These components were created for the different types of button. They used props in order to ensure they could be exported and used efficiently within other pages of the website.
+
 ``` react
 function Week3() {
     return (
@@ -290,6 +292,8 @@ const schema = yup.object().shape({
   });
 ```
 
+Using Yup and useform allowed for a customisable form with configurable constraints. As shown here, constraints such as a minimum & maximum length, character set and whether information is required can be configured.
+
 ``` react
 const [showPassword, setShowPassword] = useState(false);
     const [start, setStart] = useState(true);
@@ -333,6 +337,8 @@ const [showPassword, setShowPassword] = useState(false);
         setPasswordRequest(true);
     }
 ```
+
+These functions detect user interactions and update the state accordingly. Doing so allowed for multiple screens to be displayed whilst remaining on the same page. Single page applications are preferential for React development, as these are more efficient & scalable.
 
 ``` react
 {!submitted && !login && start && (
@@ -394,7 +400,9 @@ const [showPassword, setShowPassword] = useState(false);
         </StyledContainerLogin>
 ```
 
- <h3 align="center">
+Conditional rendering was utilized to display the various necessary screens (such as login, logged in, and password reset.)
+
+<h3 align="center">
      Working Component Video: Login Form
 </h3>
 
@@ -529,6 +537,8 @@ const { open, onClickSetEnglish, onClickSetFrench, onClickSetGerman, onClickSetS
 }
 ```
 
+Using multiple props in a component allowed these to be accessed from other local components. Each prop allowed for conditional re-rendering of all text content on a page dependent on the language selected from the dropdown menu.
+
 ``` react
 const [open, setOpen] = useState(false);
     const [language, setLanguage] = useState("English");
@@ -542,6 +552,8 @@ const [open, setOpen] = useState(false);
         setOpen(!open);
     }
 ```
+
+The above process was repeated for each language, determining which language was selected through the menu.
 
 ``` react
 { language==="English" && !open && (
@@ -564,6 +576,8 @@ const [open, setOpen] = useState(false);
                 </>
             )}
 ```
+
+The above process was also repeated for each language, with the appropriately modified content replacing the english text.
 
 <h3 align="center">
      Working Component Video: Dropdown Menu
