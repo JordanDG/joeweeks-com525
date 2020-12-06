@@ -559,36 +559,272 @@ This component functions arguably more effectively than any of the other compone
 Further feedback received post-production identified that further indication of the option being hovered over by the user would be preferred. This could be achieved by highlighting the background colour of the option on hover. This is the main change I would make, should I reattempt this or change it. Despite this, overall I feel that this is a successful component, and I have achieved precisely what I set out to do.
 
 <h2 align="center">
-  Component 4: Modal Dialog Alert 
+  Component 4: Modal Dialog box
 </h2>
 
+![modalfinal](C:\Users\Jordan\Desktop\ID_writeup\modalfinal.PNG)
+
+<h3 align="center">
+     Research
+</h3>
+
+Researching this component identified two key types of dialog box. Modal & modeless boxes can be used on websites and applications, with each achieving a different goal. Simply put, a modeless box allows users to utilize and interact with the parent window without being impacted by its presence. In contrast to this, a modal box is designed to prevent users from interacting with any other elements on the page, forcing a 'call-to-action' or invoking a response from the user. A common usage example of this is to prompt visitors to subscribe to a recurring newsletter or advertising media. As concluded by envatotuts ([link](https://webdesign.tutsplus.com/articles/modal-and-modeless-boxes-in-web-design--webdesign-2282), 2012), "Always start a design by trying to use modeless boxes whenever you can... they are unintrusive and allow a user to work in their own way." Whilst modeless boxes appeared to be suitable for most usage cases, my component was intending to prompt users to sign up to a newsletter, so a modal dialog box is more suitable.
+
+Another essential use for modal dialog boxes is through notifying users of a websites cookies policy, and allowing them to accept or deny this policy. Whilst the majority of users blindly accept or close these windows, they are still essential to cater to those who would benefit from them. 
+
+<h3 align="center">
+  Evaluation of guidelines
+</h3>
+
+As stated by Material Design ([link](https://material.io/components/dialogs#usage), 2020), "Dialogs are purposefully interruptive, so they should be used sparingly." It quickly became clear that the response a user chooses to take regarding the dialog box, should not negatively impact their ability to interact with the website. Smooth entry and exit transitions were notably present in all guideline documentation presented, despite being solely for aesthetics. Having clear and visible information presented to the user immediately is also essential, as well as a method for closing the pop-up swiftly, to ensure it remains as unintrusive as possible. Information gleaned from the guidelines presented to me focus on ensuring relevant information is conveyed in a visually appealing - yet clear, manner, while not inherently negatively impacting the users experience whilst using the site. Dialog boxes are essential aspects of any mobile application, with any action taken on most popular applications being accompanied by a dialog box, often acting as a confirmation or a request for information, such as adding a new contact. 
+
+![exampledeletebutton](C:\Users\Jordan\Desktop\ID_writeup\exampledeletebutton.png)
+
+<h5 align="center">
+  <a href="https://medium.com/@arunkumar_c/designing-confirmation-dialog-box-for-web-632a1876b907">Example Modal Alert Box</a>
+</h5>
+
+<h3 align="center">
+     Planning & Design Prototyping
+</h3>
+
+During the planning stage, I established that my dialog box would prompt users to sign up to a newsletter or subscribe to regular updates. It would enable them to do this by providing a name & an email, through which they would receive communications. Utilizing the same shade of green present in all other components throughout the portfolio allows for cohesion and easy implementation onto a live website. Prototyping took place in Figma, utilizing the overlay feature to simulate a modal dialog box appearing over a websites contents. This simulation worked flawlessly, almost perfectly replicating the intended design. A video of this can be seen below.
+
+![modaldialogprototype](C:\Users\Jordan\Desktop\ID_writeup\modaldialogprototype.PNG)
+
+As shown here, the right screen is designed to emulate a functional website, which for the purpose of replicating the modal dialog, also provides a prompt button to display the dialog box. The second screen is then projected on top of the page, only closing if the user interacts with the close button. 
+
+<iframe width="1060" height="520" src="https://www.youtube.com/embed/lP1rFW23TE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ <h3 align="center">
+  Coding
+</h3>
+
+```react
+const ModalOutterWrapper = styled.div`
+    animation: 0.1s ${keyframes({from: {opacity: 0}, to: {opacity: 1}})} ease-in-out;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgb(0,215,163, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+```
+
+```react
+const Modal = (props) => {
+
+    const { show, onClose, children } = props;
+
+    const blockClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    return (
+        <>
+            {show && (<ModalOutterWrapper onClick={onClose}>
+                <StyledModal onClick={blockClick}>
+                    <StyledModalHeader>
+                        Test
+                    </StyledModalHeader>
+                    {children}
+                </StyledModal>
+            </ModalOutterWrapper>)}
+        </>
+    )
+}
+```
+
+```react
+function Week8() {
+
+    const [showModal, setShowModal] = useState(false);
+    const handleClose = () => setShowModal(false);
+    const handleClick = () => setShowModal(true);
+
+    return (
+        <StyledContainer>
+            <Modal show={showModal} onClose={handleClose}>
+                <StyledFlexModal>
+                    <StyledModalImageContainerImage />
+                    <StyledModalContent>
+                        <ModalCloserButton>
+                            <FontAwesomeIcon icon={faTimesCircle} color="#00D7A3" onClick={handleClose} />
+                        </ModalCloserButton>
+                        <StyledModalTitle>
+                            <p>Love What You See?</p>
+                            <h1>Signup to our newsletter!</h1>
+                            <StyledModalForm>
+                                <StyledFormLineEmail>   
+                                    <p>Email:</p><input type="email" placeholder="Email"/>
+                                </StyledFormLineEmail>
+                                <StyledFormLineName>   
+                                    <p>First Name:</p><input type="text" placeholder="Name"/>
+                                </StyledFormLineName>
+                                <StyledFormLineSubmit>   
+                                    <StyledButton type="submit">Submit</StyledButton>
+                                </StyledFormLineSubmit>
+                            </StyledModalForm>
+                        </StyledModalTitle>
+                    </StyledModalContent>
+                </StyledFlexModal>
+            </Modal>
+```
+
+A basic toggling state was used to display the modal dialog box. This could also be closed using the appropriate methods once the dialog box was visible.
+
+  <h3 align="center">
+     Working Component Video: Modal Dialog Box
+</h3>
 
 
+<iframe width="1060" height="520" src="https://www.youtube.com/embed/xkQ-BU5HR08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<h3 align="center">
+     Feedback & Reflection
+</h3>
 
+Unlike my previous components, I am not overall totally content with the outcome of this component. From a conceptual point of view, it is fully functional and achieves what is expected of it, however it lacks the detail & complexity to validate itself as an advanced component. The main aspect missing from the component is the lack of any real verification on the email input area of the component. I also feel that the component could be far more fluid in its animation both entering and exiting the screen. If I was to undertake the design process of this component again, I wouldn't attempt to create a newsletter or cookies modal dialog box, but instead focus on emulating a mobile application, utilising multiple instances of simpler dialog boxes, such as those displayed below. 
 
+![dialogs](C:\Users\Jordan\Desktop\ID_writeup\dialogs.PNG)
 
+<h5 align="center">
+  <a href="https://material.io/components/dialogs#usage">Example Mobile Application Modal Dialog Boxes</a>
+</h5>
+---
 
+<h2 align="center">
+  Component 5: Toggle Switch
+</h2>
 
+![togglefinal](C:\Users\Jordan\Desktop\ID_writeup\togglefinal.PNG)
 
+<h3 align="center">
+     Research
+</h3>
 
+The final component documented in this portfolio was a toggle switch. These are often used to affect the look of a website or toggling a user setting. The function of this component must compose of two mutually exclusive states, in that it can either be active or disabled. Toggling user settings can be an effective use of this component, enabling or disabling settings accordingly. The creation process of this component is more complex than similar components (such as checkboxes, or dropdowns) as HTML provides no default element to support a toggle switch creation, "Therefore, the implementation of switches usually requires additional HTML markup and CSS to create the switch interface and Javascript for the interactivity." ([link](https://www.queness.com/post/14585/toggle-switches-in-web-development), 2013).  
 
+A common usage case for toggle switches is the ability to toggle a colour scheme for a website, namely 'dark-mode' and 'light mode.' This option is essential in providing an accessible site for a wider range of users, as some users may find bright websites with darker text illegible, or vice-versa. 
 
+<h3 align="center">
+  Evaluation of guidelines
+</h3>
 
+There are a number of guidelines & principles regarding the design of a toggle switch. Toggle switches should always display a default value, with labels being clear & indicative of their use.  Actions triggered as a result of the toggle should take effect immediately, to clearly communicate to the user that their action was successful. Remaining consistent to commonly used design systems is essential to the ease of use. Ensuring the toggle consists of two clearly defined states, with a toggle being visually represented by the circle sliding to the opposite side it was on prior. Examples of this can be seen below.
 
+![](https://uxmovement.com/wp-content/uploads/2019/08/toggle-system-state.png)
 
+<h5 align="center">
+  <a href="https://uxmovement.com/mobile/stop-misusing-toggle-switches/">Toggle Switches In Action</a>
+</h5>
 
+A toggle switch is only appropriate if the following conditions are met: ([link](https://uxmovement.com/mobile/stop-misusing-toggle-switches/), 2019)
 
+- Its use would be "Applying a system state, not a contextual one".
+- it'd be "Presenting binary options, not opposing ones".
+- and its use would be in "activating a state, not performing an action"
 
+ <h3 align="center">
+  Planning & design prototyping
+</h3>
 
+Whilst documenting the design in Figma was not difficult to do (along with the animated user interactions using states), Further thought had to be considered on the best approach for developing the functional component. Unlike other components featured, the lack of official support through an HTML element infers that a bespoke element must be created using existing HTML features (such as divs), styling to position and size it, and react state management to toggle between the two options. The Figma prototype can be seen below:
 
+![toggleswitchplanning](C:\Users\Jordan\Desktop\ID_writeup\toggleswitchplanning.PNG)
 
+As seen in the image above, the usage of the toggle switch is emulated by creating two identical pages (only differentiating by the changes the switch would cause) and navigating between the two pages based when a user clicks or drags. 
 
+<iframe width="1060" height="520" src="https://www.youtube.com/embed/rXzXDssnhAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+ <h3 align="center">
+  Coding
+</h3>
 
+```react
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+```
 
+```react
+const time = '0.25s';
+const setAnimation = (from, to) => keyframes({ from: from, to: to });
+```
 
+Animation duration and syntax was assigned as a variable to make reusability efficient. 
 
+```react
+const StyledContainer = styled.div`
+    animation: ${time} ${({ showBackground }) => (showBackground && setAnimation({backgroundColor: '#fff', color: '#333'}, {backgroundColor: '#333', color: '#fff'})) || (!showBackground && setAnimation({backgroundColor: '#333', color: '#fff'}, {backgroundColor: '#fff', color: '#333'}))} linear;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: 91.5vh;
+`;
+```
 
- 
+Conditional rendering utilizing hooks & ternary operators was used to toggle between the two page states. This action could be repeated on any element efficiently to allow for a change dependant on the toggle switch.
+
+```react
+const Toggle = (props) => {
+    const [active, setActive] = useState(false);
+    const { onActive, onNotActive } = props;
+    
+    useEffect(() => {
+        if (!active) {
+            onNotActive();
+            return;
+        }
+
+        onActive();
+    }, [active]);
+
+    const handleCLick = () => {
+        setActive(!active);
+    }
+
+    return (
+        <StyledButton active={active}>
+            <StyledSwitch active={active} onClick={handleCLick}>
+                { active && (
+                    <FontAwesomeIcon icon={faMoon}/>
+                )}
+                { !active && (
+                    <FontAwesomeIcon icon={faSun}/>
+                )}
+            </StyledSwitch>
+        </StyledButton>
+    );
+}
+```
+
+```react
+    const [showBackground, setShowBackground] = useState(false);
+    const handleNotActive = () => {
+        setShowBackground(false);
+    }
+    const handleActive = () => {
+        setShowBackground(true);
+    }
+```
+
+  <h3 align="center">
+     Working Component Video: Toggle Switch
+</h3>
+
+<iframe width="1060" height="520" src="https://www.youtube.com/embed/w94FCPwoAMg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 align="center">
+     Feedback & Reflection
+</h3>
+
+Feedback from classmates clearly indicated this component was a success. Feedback allowed me to gain an invaluable insight into how easy it is to observe the function of the switch. Because of this, the splash text was added to the middle of the screen to further indicate a clear change, with the colour switching between dark and light depending on the toggle state of the switch. Utilizing conditional CSSstyling through React was paramount to the success of the component. Doing so allowed me to efficiently toggle between different colour schemes based on the input of the user. The main complaint I would have about my design is the lack of any real complexity to the component. Whilst the component functions effectively, its function is simplistic in nature, lacking any real depth. If I was going to attempt this component at a later date, I would take a different approach by abandoning the idea of the dark & light toggle, moving away from accessibility features in favour of something more creative. 
