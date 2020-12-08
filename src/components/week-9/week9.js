@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
-import FeaturedImage from './assets/BackgroundColourImage.jpg';
-
 const time = '0.25s';
 const setAnimation = (from, to) => keyframes({ from: from, to: to });
 

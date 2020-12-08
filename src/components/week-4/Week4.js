@@ -285,11 +285,8 @@ const PasswordResetConfirm = styled.p`
 function Week4() {;
 
     const [showPassword, setShowPassword] = useState(false);
-    const [start, setStart] = useState(true);
     const [submitted, setSubmitted] = useState(false);
-    const [login, setLogin] = useState(false);
-    const [forgotPassword, setForgotPassword] = useState(false);
-    const [passwordRequest, setPasswordRequest] = useState(false);
+    const [visiblePage, setVisiblePage] = useState("default");
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema)
@@ -299,36 +296,33 @@ function Week4() {;
         setSubmitted(!submitted)
     }
 
-    const LoginContinue = () => {
-        setLogin(!login);
-        setSubmitted(!submitted);
-    }
-
     const handleClick = () => {
         setShowPassword(!showPassword);
     }
 
     const Logout = () => {
-        setSubmitted(false);
-        setLogin(false);
-        setForgotPassword(false);
-        setPasswordRequest(false);
-        setStart(true);
+        setVisiblePage("default");
     }
 
-    const passwordForgotten = () => {
-        setForgotPassword(true)
-        setStart(false);
+    const pageForgotPassword = () => {
+        setVisiblePage("forgotPassword");
     }
 
-    const passwordReset = () => {
-        setForgotPassword(false);
-        setPasswordRequest(true);
+    const pageLogged = () => {
+        setVisiblePage("loggedIn");
+    }
+
+    const pageHomeLogged = () => {
+        setVisiblePage("homepage");
+    }
+
+    const pagePasswordResetRequested = () => {
+        setVisiblePage("forgotPasswordRequestHandled");
     }
 
     return (
         <StyledContainerLogin>
-            {submitted && (
+            {visiblePage==="homepage" && (
             <div>
                 <StyledTop>
                     <BackArrow>
@@ -343,12 +337,11 @@ function Week4() {;
                     <SuccessText>
                         <SuccessTextHeader>Welcome, Jordan</SuccessTextHeader>
                     </SuccessText>
-                    <SuccessContinueButton onClick={LoginContinue}>Continue</SuccessContinueButton>
                 </StyledLoginSuccessContainer>
             </div>
             )}
 
-            {login && (
+            {visiblePage==="loggedIn" && (
                 <div>
                 <StyledTop>
                     <BackArrow>
@@ -363,13 +356,13 @@ function Week4() {;
                     <SuccessText>
                         <SuccessTextHeader>Working.</SuccessTextHeader>
                     </SuccessText>
-                    <SuccessContinueButton onClick={LoginContinue}>Continue</SuccessContinueButton>
+                    <SuccessContinueButton onClick={pageHomeLogged}>Continue</SuccessContinueButton>
                 </StyledLoginSuccessContainer>
                 </div>
             )}
 
-            {!submitted && !login && start && (
-            <form onSubmit={handleSubmit(onSubmit)}>
+            {visiblePage==="default" && (
+            <form onSubmit={pageLogged}>
                 <StyledTop>
                     <TopTitleLogin>
                         <TopTitleTextLogin>Login</TopTitleTextLogin>
@@ -390,19 +383,19 @@ function Week4() {;
                 <StyledPasswordCheckbox>
                     <PasswordRetentionCheckbox type="checkbox" />
                     <PasswordRetention>Remember Password</PasswordRetention>
-                    <PasswordForgot href="#resetpassword" onClick={passwordForgotten}>FORGOT PASSWORD?</PasswordForgot>
+                    <PasswordForgot href="#resetpassword" onClick={pageForgotPassword}>FORGOT PASSWORD?</PasswordForgot>
                 </StyledPasswordCheckbox>
                 <StyledSubmitContainer>
                     <SubmitButton type="submit">Submit</SubmitButton>
                 </StyledSubmitContainer>
                 <SignupSplashContainer>
                     <SignUpPartOne>No Account?</SignUpPartOne>
-                    <SignUpPartTwo href="#signup">Sign Up</SignUpPartTwo>
+                    <SignUpPartTwo href="#signup">Sign Up</SignUpPartTwo> 
                 </SignupSplashContainer>
             </form>
             )}
 
-        {forgotPassword && !login && !start && (
+        {visiblePage==="forgotPassword" && (
             <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
                     <BackArrow>
@@ -420,12 +413,12 @@ function Week4() {;
                     <StyledErrorMessage>{errors.email?.message}</StyledErrorMessage>
                 </StyledInputContainer>
                 <StyledSubmitContainer>
-                    <SubmitButton type="submit" onClick={passwordReset}>Submit</SubmitButton>
+                    <SubmitButton type="submit" onClick={pagePasswordResetRequested}>Submit</SubmitButton>
                 </StyledSubmitContainer>
             </form>
             )}
 
-        {!forgotPassword && !login && !start && passwordRequest && (
+        {visiblePage==="forgotPasswordRequestHandled" && (
             <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
                     <BackArrow>
