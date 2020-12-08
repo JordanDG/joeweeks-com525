@@ -299,7 +299,7 @@ const schema = yup.object().shape({
 Using Yup and useform allowed for a customisable form with configurable constraints. As shown here, constraints such as a minimum & maximum length, character set and whether information is required can be configured.
 
 ``` react
-const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const [start, setStart] = useState(true);
     const [submitted, setSubmitted] = useState(false);
     const [login, setLogin] = useState(false);
@@ -345,8 +345,8 @@ const [showPassword, setShowPassword] = useState(false);
 These functions detect user interactions and update the state accordingly. Doing so allowed for multiple screens to be displayed whilst remaining on the same page. Single page applications are preferential for React development, as these are more efficient & scalable.
 
 ``` react
-{!submitted && !login && start && (
-            <form onSubmit={handleSubmit(onSubmit)}>
+    {visiblePage==="default" && (
+            <form onSubmit={pageLogged}>
                 <StyledTop>
                     <TopTitleLogin>
                         <TopTitleTextLogin>Login</TopTitleTextLogin>
@@ -367,21 +367,21 @@ These functions detect user interactions and update the state accordingly. Doing
                 <StyledPasswordCheckbox>
                     <PasswordRetentionCheckbox type="checkbox" />
                     <PasswordRetention>Remember Password</PasswordRetention>
-                    <PasswordForgot href="#resetpassword" onClick={passwordForgotten}>FORGOT PASSWORD?</PasswordForgot>
+                    <PasswordForgot href="#resetpassword" onClick={pageForgotPassword}>FORGOT PASSWORD?</PasswordForgot>
                 </StyledPasswordCheckbox>
                 <StyledSubmitContainer>
                     <SubmitButton type="submit">Submit</SubmitButton>
                 </StyledSubmitContainer>
                 <SignupSplashContainer>
                     <SignUpPartOne>No Account?</SignUpPartOne>
-                    <SignUpPartTwo href="#signup">Sign Up</SignUpPartTwo>
+                    <SignUpPartTwo href="#signup">Sign Up</SignUpPartTwo> 
                 </SignupSplashContainer>
             </form>
             )}
 ```
 
 ``` react
-{!forgotPassword && !login && !start && passwordRequest && (
+        {visiblePage==="forgotPasswordRequestHandled" && (
             <form onSubmit={handleSubmit(onSubmit)}>
                 <StyledTop>
                     <BackArrow>
